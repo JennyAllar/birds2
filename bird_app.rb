@@ -9,7 +9,7 @@ class BirdApp < Sinatra::Application
 
   post '/' do
     birds_table = DB[:birds]
-    birds_table.insert(name: params[:bird])
+    birds_table.insert(name: params[:bird], color: params[:color])
     params[:bird]
     redirect '/'
   end
