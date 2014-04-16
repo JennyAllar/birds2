@@ -1,4 +1,11 @@
 <form action="/" method="post">
-  Bird: <input type="text" placeholder= "Bird Name" name="bird_added" autofocus>
+  Bird: <input type="text" placeholder= "Bird Name" name="bird" autofocus>
   <input type="submit" value="Add">
 </form>
+
+<hr>
+<ul>
+<% birdies.each do |bird| %>
+  <li><%=bird[:name] %></li>
+<% end %>
+</ul>
